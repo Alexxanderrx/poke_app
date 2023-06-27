@@ -1,0 +1,4 @@
+.imgPoke:hover {
+  background-color: aqua;
+  background-image: "data.sprites.back_default";
+}
