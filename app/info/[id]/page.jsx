@@ -16,10 +16,10 @@ async function getData(id) {
 
 
 async function page({ params }) {
+    const [isShown, setIsShown] = useState(false);
 
     const data = await getData(params.id);
     console.log(data);
-
 
     return (
         <div
@@ -29,16 +29,33 @@ async function page({ params }) {
                 alignItems: "center",
                 flexDirection: "column",
                 height: "100vh",
+
             }}
         >
 
             <h1>Name: {data.name}</h1>
             <p>Base experience: {data.base_experience}</p>
             <p>Type: {data.types[0].type.name}</p>
-            <div>
-                {/* onMouseEnter={() => bigImg()} */}
+            <div onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)} style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "50vh",
+                    width: "500px",
+                    backgroundColor: "white"
+                }}>
                 <img src={data.sprites.front_default} alt="Front" />
                 <img src={data.sprites.back_default} alt="Back" />
+                {/* {isShown && (
+                    <div>
+                        I'll appear when you hover over the button.
+                    </div>
+                )} */}
+                {isShown == false ?
+                    <img src={data.sprites.front_default} alt="Front" /> : <img src={data.sprites.back_default} alt="Back" />
+
+                }
             </div>
         </div>
     );
