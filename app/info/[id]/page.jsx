@@ -9,38 +9,33 @@ async function getData(id) {
     return data;
 }
 
-// async function bigImg(x) {
-//     x.style.height = "64px";
-//     x.style.width = "64px";
-// }
-
-
 async function page({ params }) {
 
     const data = await getData(params.id);
     console.log(data);
-
+    const numbers = [0, 1, 2, 3, 4, 5];
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                height: "100vh",
-            }}
-        >
+        <div className={pokeStyle.body_box}>
+            <div className={pokeStyle.box}>
+                <div className={pokeStyle.boxData}>
+                    <h1>{data.name}</h1>
+                    <p>Base experience: {data.base_experience}</p>
+                    <p>Type: {data.types[0].type.name}</p>
+                    <p>Height: {data.height}</p>
 
-            <h1>Name: {data.name}</h1>
-            <p>Base experience: {data.base_experience}</p>
-            <p>Type: {data.types[0].type.name}</p>
-            <div>
-                {/* onMouseEnter={() => bigImg()} */}
-                <img src={data.sprites.front_default} alt="Front" />
-                <img src={data.sprites.back_default} alt="Back" />
+                    <h4>Stats Base:</h4>
+                    {numbers.map((p) => (
+                        <p key={p}><span className={pokeStyle.stats}>{data.stats[p].stat.name}</span>: {data.stats[p].base_stat}</p>
+                    ))}
+                </div>
+                <div className={pokeStyle.boxImg}>
+                    <img className={pokeStyle.sprite} src={data.sprites.front_default} alt="Front_default" />
+                    <img className={pokeStyle.sprite} src={data.sprites.front_shiny} alt="Front_shiny" />
+                </div>
             </div>
         </div>
+
     );
 }
 

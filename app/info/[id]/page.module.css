@@ -1,4 +1,54 @@
-.imgPoke:hover {
-  background-color: aqua;
-  background-image: "data.sprites.back_default";
+.body_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80%;
+  /* background-color: rgb(53, 139, 139); */
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 60vh;
+  width: 100%;
+  /* background-color: aqua; */
+  border: 10px solid green;
+  border-radius: 30px;
+  background-color: rgba(127, 255, 212, 0.8);
+}
+
+.boxData {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  /* background-color: rgb(133, 255, 173); */
+  height: 100%;
+  width: 30%;
+  padding: 3%;
+
+}
+
+.boxData h1 {
+  text-transform: capitalize;
+}
+
+.boxImg {
+  /* background-color: rgb(112, 83, 130); */
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.stats {
+  text-transform: capitalize;
+}
+
+.sprite {
+  width: 100%;
 }

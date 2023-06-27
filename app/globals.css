@@ -26,6 +26,8 @@ body {
   min-height: 100vh;
   align-items: center;
   width: 80%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   background-color: rgba(127, 236, 255, 0.495);
 }
 

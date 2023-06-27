@@ -13,15 +13,15 @@ async function CardPokemon({ url }) {
     // console.log();
 
     return (
-        <Link href={`info/${dataPokemon.id}`} target="_blank">
-            <div className="cardPokemon">
+        <Link href={`info/${dataPokemon.id}`} target="_blank" style={{ textDecoration: "none", color: "black" }}>
+            <div className="cardPokemon" >
                 <div>
                     <img src={imagePokemon} alt="Spiderman" />
                 </div>
                 <h1>{dataPokemon.name}</h1>
-                <p>{dataPokemon.id}</p>
+                {/* <p>{dataPokemon.id}</p> */}
             </div>
-        </Link>
+        </Link >
     );
 }
 
