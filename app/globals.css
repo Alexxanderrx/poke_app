@@ -17,7 +17,27 @@ body {
   align-items: center;
 }
 
+/* ---------------------------- */
+#navBar {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 99, 99);
+  /* border: 1px solid black; */
+  border-bottom: 0;
+}
+
 /* --------------------------- */
+#contenedor_prin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
 #contenedor {
   display: flex;
   flex-wrap: wrap;
@@ -25,23 +45,27 @@ body {
   gap: 1rem;
   min-height: 100vh;
   align-items: center;
-  width: 80%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  background-color: rgba(127, 236, 255, 0.495);
+  width: 100%;
+  padding: 1% 0%;
+  background-color: rgb(244, 244, 244);
+  /* border: 1px solid black; */
 }
 
 .cardPokemon {
   /* height: 200px; */
   width: 200px;
-  background-color: rgba(255, 255, 255, 0.543);
+  background-color: rgb(224, 224, 224);
   border: 1px solid gray;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  /* padding: 10px; */
   align-items: center;
   justify-content: center;
+}
+
+.cardPokemon:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .cardPokemon>div {

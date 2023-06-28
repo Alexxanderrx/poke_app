@@ -14,10 +14,12 @@ async function page({ params }) {
     const data = await getData(params.id);
     console.log(data);
     const numbers = [0, 1, 2, 3, 4, 5];
-
+    let tipo = data.types[0].type.name;
+    console.log(tipo);
+    console.log(typeof (tipo));
     return (
         <div className={pokeStyle.body_box}>
-            <div className={pokeStyle.box}>
+            <div className={pokeStyle.box} >
                 <div className={pokeStyle.boxData}>
                     <h1>{data.name}</h1>
                     <p>Base experience: {data.base_experience}</p>
@@ -34,7 +36,7 @@ async function page({ params }) {
                     <img className={pokeStyle.sprite} src={data.sprites.front_shiny} alt="Front_shiny" />
                 </div>
             </div>
-        </div>
+        </div >
 
     );
 }
