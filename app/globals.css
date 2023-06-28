@@ -52,14 +52,14 @@ body {
 }
 
 .cardPokemon {
-  /* height: 200px; */
+  width: 200px;
+  height: 190px;
   width: 200px;
   background-color: rgb(224, 224, 224);
   border: 1px solid gray;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  /* padding: 10px; */
   align-items: center;
   justify-content: center;
 }
@@ -80,9 +80,34 @@ body {
 
 .cardPokemon>h1 {
   text-transform: capitalize;
+  color: black;
+  font-size: 28px;
+
 }
 
 .cardPokemon>h1,
 .cardPokemon>p {
   margin: 0;
+}
+
+.cardFondo {
+  text-decoration: none;
+  width: 200px;
+  height: 190px;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pokeSpinner {
+  animation: 3s rotate linear infinite;
+  transform-origin: 50% 50%;
 }
